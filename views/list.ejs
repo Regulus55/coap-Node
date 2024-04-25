@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/main.css" rel="stylesheet" />
+  </head>
+  <body class="grey-bg">
+    <%- include("nav.ejs")%><!-- include 같은거 쓸때. 상단바 다른페이지에도
+    보이게하는거 -->
+
+    <div class="white-bg">
+      <% for (let i = 0 ; i < 글목록.length; i++){ %>
+      <div class="list-box">
+        <h4><%= 글목록[i].title %></h4>
+        <p><%= 글목록[i].content %></p>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
